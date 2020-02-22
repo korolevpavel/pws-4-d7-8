@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Книги у друзей</title>
+</head>
+<body>
+	<table border=1>
+		{% for bookOnHand in object_list %}
+		    <tr>
+		    	<td> {{ bookOnHand.friend }} </td>
+		    	<td> {{ bookOnHand.book }}</td>
+		    	<td> {{ bookOnHand.date }} </td>
+		    </tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
+{% endblock %}
